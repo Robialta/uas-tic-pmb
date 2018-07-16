@@ -1,0 +1,168 @@
+{% extends 'admin.html' %}
+
+
+
+{% block  content %}
+<!-- validasi -->
+<div class="row validasi">
+	<div class="pendaftar">
+		<h3 class="text-center">Daftar Mahasiswa yg Mendaftar</h3>
+		<div class="col-sm-10 col-sm-offset-1">
+			<table class="table table-striped" >
+				<thead >
+					<th >Nama</th>
+					<th>E-mail</th>
+					<th>Prodi Pilihan 1</th>
+					<th>Prodi Pilihan 2</th>
+					<th>Validasi</th>
+				</thead>
+				<tbody>
+					{% for mhsdaftar in mahasiswadaftar %}
+					<tr >
+						<td>{{mhsdaftar.nama}}</td>
+						<td>{{mhsdaftar.email}}</td>
+						<td>{{mhsdaftar.prodi1}}</td>
+						<td>{{mhsdaftar.prodi2}}</td>					
+						<td>
+							
+							<a class="btn btn-success btn-sm" href="{{url_for('tinjau',id=mhsdaftar.id)}}">Tinjau</a>
+						</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="lseleksi">
+		<div class="col-sm-5 col-sm-offset-1">
+			<h3 class="text-center">Daftar Mahasiswa yg Lolos Seleksi</h3>
+			<table class="table table-bordered" >
+				<thead >
+					<th >Nama</th>
+					<th>E-mail</th>
+					<th>Prodi Pilihan 1</th>
+					<th>Prodi Pilihan 2</th>
+					<!-- <th>No seleksi</th> -->
+					
+				</thead>
+				<tbody>
+					{% for mhslolos in mahasiswalolos %}
+					<tr >
+						<td>{{mhslolos.nama}}</td>
+						<td>{{mhslolos.email}}</td>
+						<td>{{mhslolos.prodi1}}</td>
+						<td>{{mhslolos.prodi2}}</td>
+						<!-- <td>{{mhslolos.no_seleksi}}</td> -->
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="tlseleksi">
+		<div class="col-sm-5">
+			<h3 class="text-center">Daftar Mahasiswa yg Gagal Seleksi</h3>
+			<table class="table table-bordered" >
+				<thead >
+					<th >Nama</th>
+					<th>E-mail</th>
+					<th>Prodi Pilihan 1</th>
+					<th>Prodi Pilihan 2</th>
+				</thead>
+				<tbody>
+					{% for mhsgagal in mahasiswagagal %}
+					<tr >
+						<td>{{mhsgagal.nama}}</td>
+						<td>{{mhsgagal.email}}</td>
+						<td>{{mhsgagal.prodi1}}</td>
+						<td>{{mhsgagal.prodi2}}</td>	
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+</div>
+	
+	
+<!-- end validasi -->
+
+<!-- <div class="row text center" style="margin:0 50px">
+	<h3 class="text-center">Daftar Mahasiswa yg Mendaftar</h3><br>
+    <table class="table table-striped">
+    	<thead >
+    		<th >Nama</th>
+			<th>E-mail</th>
+			<th>Prodi Pilihan 1</th>
+			<th>Prodi Pilihan 2</th>
+			<th>Status</th>
+			<th>Validasi</th>
+    	</thead>
+    	<tbody>
+    		{% for mhsdaftar in mahasiswadaftar %}
+    		<tr >
+    			<td>{{mhsdaftar.nama}}</td>
+				<td>{{mhsdaftar.email}}</td>
+				<td>{{mhsdaftar.prodi1}}</td>
+				<td>{{mhsdaftar.prodi2}}</td>
+    			<td>{{mhsdaftar.status}}</td>
+    			<td>
+    				
+    				<a class="btn btn-success btn-sm" href="{{url_for('tinjau',id=mhsdaftar.id)}}">Tinjau</a>
+    			</td>
+    		</tr>
+    		{% endfor %}
+    	</tbody>
+	</table>
+	
+	<h3 class="text-center" style="margin-top:100px">Daftar Mahasiswa yg Lolos Seleksi</h3><br>
+    <table class="table table-striped"  >
+    	<thead >
+    		<th >Nama</th>
+			<th>E-mail</th>
+			<th>Prodi Pilihan 1</th>
+			<th>Prodi Pilihan 2</th>
+			
+    	</thead>
+    	<tbody>
+    		{% for mhslolos in mahasiswalolos %}
+    		<tr >
+    			<td>{{mhslolos.nama}}</td>
+				<td>{{mhslolos.email}}</td>
+				<td>{{mhslolos.prodi1}}</td>
+				<td>{{mhslolos.prodi2}}</td> -->
+    			<!-- <td>{{mhslolos.no_seleksi}}</td> -->
+    		<!-- </tr> -->
+    		<!-- {% endfor %} -->
+    	<!-- </tbody> -->
+    <!-- </table> -->
+
+    <!-- <h3 class="text-center" style="margin-top:100px">Daftar Mahasiswa yg Gagal Seleksi</h3><br>
+    <table class="table table-striped" >
+    	<thead >
+    		<th >Nama</th>
+			<th>E-mail</th>
+			<th>Prodi Pilihan 1</th>
+			<th>Prodi Pilihan 2</th>
+    	</thead>
+    	<tbody>
+    		{% for mhsgagal in mahasiswagagal %}
+    		<tr >
+    			<td>{{mhsgagal.nama}}</td>
+				<td>{{mhsgagal.email}}</td>
+				<td>{{mhsgagal.prodi1}}</td>
+				<td>{{mhsgagal.prodi2}}</td>
+    			
+    		</tr>
+    		{% endfor %}
+    	</tbody>
+    </table>
+</div> -->
+    
+
+   
+    
+{% endblock %}

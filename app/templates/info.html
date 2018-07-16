@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<!-- info -->
+<div class="info">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Selamat Datang Calon Mahasiswa Baru</h2>
+            <div class="col-sm-6">
+                <h3>Silahkan mengikuti tes tulis yang akan dilaksanakan</h3><br>
+                <table>
+                    <tr>
+                        <td><h4>Hari</h4></td>
+                        <td><h4>:</h4></td>
+                        <td><h4>Sabtu</h4></td>
+                    </tr>
+                    <tr>
+                            <td><h4>Tanggal</h4></td>
+                            <td><h4>:</h4></td>
+                            <td><h4>14 Juli 2018</h4></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Waktu</h4></td>
+                            <td><h4>:</h4></td>
+                            <td><h4>09.00 WITA</h4></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Lokasi Ujian</h4></td>
+                            <td><h4>:</h4></td>
+                            <td><h4>Fakultas Teknik Universitas Hamzanwadi</h4></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Ruangan</h4></td>
+                            <td><h4>:</h4></td>
+                            <td><h4>B5</h4></td>
+                        </tr>
+                </table>
+            </div>
+            <div class="col-sm-6">
+                <br>
+                <div class="idcard">
+                    <h4 class="text-center">Kartu Peserta Tes Seleksi</h4>
+                    <div class="row">
+                        <div class="col-sm-4">
+                                <img class="img-rounded" src="../static/bootstrap/img/paspoto.jpg">
+                        </div>
+                        <div class="col-sm-3">
+                            <h4>Nama </h4>
+                            <h4>Alamat</h4>
+                            <h4>Prodi 1</h4>
+                            <h4>prodi 2</h4>
+                            <h4>No Seleksi</h4>
+                        </div>
+                        <div class="col-sm-5">
+                                <h4>: {{current_user.nama}}</h4>
+                                <h4>: {{current_user.alamat}}</h4>
+                                <h4>: {{current_user.prodi1}}</h4>
+                                <h4>: {{current_user.prodi2}}</h4>
+                                <h4>: {{current_user.no_seleksi}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end info -->
+
+<!-- <div class="container">
+   <div class="row" style="margin-bottom:100px; padding-top:70px">
+       <h2 class="text-center">Selamat Datang Calon Mahasiswa Baru</h2>
+       <br>
+       <h3>Silahkan mengikuti tes tulis yang akan dilaksanakan</h3><br>
+       <table>
+           <tr>
+               <td><h4>Hari</h4></td>
+               <td><h4>:</h4></td>
+               <td><h4>Sabtu</h4></td>
+           </tr>
+           <tr>
+                <td><h4>Tanggal</h4></td>
+                <td><h4>:</h4></td>
+                <td><h4>14 Juli 2018</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Waktu</h4></td>
+                <td><h4>:</h4></td>
+                <td><h4>09.00 WITA</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Lokasi Ujian</h4></td>
+                <td><h4>:</h4></td>
+                <td><h4>Fakultas Teknik Universitas Hamzanwadi</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Ruangan</h4></td>
+                <td><h4>:</h4></td>
+                <td><h4>B5</h4></td>
+            </tr>
+       </table>
+       <div class="idcard">
+           <div class="col-sm-6 col-sm-offset-3" style="border:1px solid gray; padding-bottom:20px">
+                <h4 class="text-center">Kartu Peserta Tes Seleksi</h4>
+               <div class="row">
+                   <div class="col-sm-4">
+                        <img class="img-rounded" src="../static/img/paspoto.jpg" alt="" style="width:150px">
+                   </div>
+                   <div class="col-sm-3">
+                       <h4>Nama </h4>
+                       <h4>Alamat</h4>
+                       <h4>Prodi 1</h4>
+                       <h4>prodi 2</h4>
+                       <h4>No Seleksi</h4>
+                   </div>
+                   <div class="col-sm-5">
+                        <h4>: {{current_user.nama}}</h4>
+                        <h4>: {{current_user.alamat}}</h4>
+                        <h4>: {{current_user.prodi1}}</h4>
+                        <h4>: {{current_user.prodi2}}</h4>
+                        <h4>: {{current_user.no_seleksi}}</h4>
+                   </div>
+               </div>
+               
+                
+           </div>
+       </div>
+       
+   </div>
+</div> -->
+
+    
+
+    
+{% endblock %}

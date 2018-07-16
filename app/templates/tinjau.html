@@ -1,0 +1,121 @@
+{% extends 'admin.html' %}
+
+
+
+{% block content %}
+<div class="tinjauu">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2 tinjau">
+			<h2 class="text-center">Detail Calon Mahasiswa Baru</h2>
+				<div class="col-sm-5">
+                    <img src="../static/bootstrap/img/paspoto.jpg" alt="" class="img-thumbnail">
+                </div>
+                <div class="col-sm-3 identitas">
+                    <h4>Nama</h4>
+                    <h4>E-mail</h4>
+                    <h4>NIK</h4>
+                    <h4>Tempat Tanggal Lahir</h4>
+                    <h4>Jenis Kelamin</h4>
+                    <h4>Prodi Pilihan 1</h4>
+                    <h4>Prodi Pilihan 2</h4>
+                    <h4>Agama</h4>
+                    <h4>Alamat</h4>
+                    <h4>No Handpone</h4>
+                    <h4>Asal Sekolah</h4>
+                    <h4>Tahun Lulus</h4>
+                    <h4>Jurusan di SLTA</h4>
+                    <h4>Nama Wali</h4>
+                    <h4>Pekerjaan Wali</h4>
+                    <h4>Penghasilan Wali</h4>
+                </div>
+                <div class="col-sm-4 identitas">
+					<h4>: {{mahasiswa.nama}}</h4>
+					<h4>: {{mahasiswa.email}}</h4>
+					<h4>: {{mahasiswa.nik}}</h4>
+					<h4>: {{mahasiswa.ttl}}</h4>
+					<h4>: {{mahasiswa.jenis_kelamin}}</h4>
+					<h4>: {{mahasiswa.prodi1}}</h4>
+					<h4>: {{mahasiswa.prodi2}}</h4>
+					<h4>: {{mahasiswa.agama}}</h4>
+					<h4>: {{mahasiswa.alamat}}</h4>
+					<h4>: {{mahasiswa.no_hp}}</h4>
+					<h4>: {{mahasiswa.asal_sekolah}}</h4>
+					<h4>: {{mahasiswa.tahun_lulus}}</h4>
+					<h4>: {{mahasiswa.jurusan_sma}}</h4>
+					<h4>: {{mahasiswa.nama_wali}}</h4>
+					<h4>: {{mahasiswa.pekerjaan_wali}}</h4>
+					<h4>: {{mahasiswa.penghasilan_wali}}</h4>
+                    <a class="btn btn-success btn-lg" href="{{url_for('lolos',id=mahasiswa.id)}}">Lolos</a>
+                    <a class="btn btn-danger btn-lg" href="{{url_for('gagal',id=mahasiswa.id)}}">Tidak lolos</a>
+                </div>
+        </div>            
+    </div>
+</div>
+
+<!-- 	
+<div class="row">
+	<h1 class="text-center">FORMULIR CALON MAHASISWA BARU</h1><hr><br>
+	<div class="col-sm-6 text-center">
+		<div class="media" align="center" >
+			<h3>Pas photo</h3>
+			<img class="img-thumbnail" style="width: 180px; height: 280px;" src="{{url_for('static', filename='img/paspoto.jpg')}}" alt="" class="media-object">
+
+		</div>
+		<div  align="center" >
+			<h3>Ijazah</h3>
+			<img class="img-thumnail" style="width: 500px; height: 700px;" src="{{url_for('static', filename='img/ijazah.jpeg')}}" alt="" class="media-object">
+
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="col-sm-5">
+			<h4>Nama</h4>
+			<h4>E-mail</h4>
+			<h4>NIK</h4>
+			<h4>Tempat Tanggal Lahir</h4>
+			<h4>Jenis Kelamin</h4>
+			<h4>Prodi Pilihan 1</h4>
+			<h4>Prodi Pilihan 2</h4>
+			<h4>Agama</h4>
+			<h4>Alamat</h4>
+			<h4>No Handpone</h4>
+			<h4>Asal Sekolah</h4>
+			<h4>Tahun Lulus</h4>
+			<h4>Jurusan di SLTA</h4>
+			<h4>Nama Wali</h4>
+			<h4>Pekerjaan Wali</h4>
+			<h4>Penghasilan Wali</h4>
+
+		</div>
+		<div class="col-sm-7">
+			<h4>: {{mahasiswa.nama}}</h4>
+			<h4>: {{mahasiswa.email}}</h4>
+			<h4>: {{mahasiswa.nik}}</h4>
+			<h4>: {{mahasiswa.ttl}}</h4>
+			<h4>: {{mahasiswa.jenis_kelamin}}</h4>
+			<h4>: {{mahasiswa.prodi1}}</h4>
+			<h4>: {{mahasiswa.prodi2}}</h4>
+			<h4>: {{mahasiswa.agama}}</h4>
+			<h4>: {{mahasiswa.alamat}}</h4>
+			<h4>: {{mahasiswa.no_hp}}</h4>
+			<h4>: {{mahasiswa.asal_sekolah}}</h4>
+			<h4>: {{mahasiswa.tahun_lulus}}</h4>
+			<h4>: {{mahasiswa.jurusan_sma}}</h4>
+			<h4>: {{mahasiswa.nama_wali}}</h4>
+			<h4>: {{mahasiswa.pekerjaan_wali}}</h4>
+			<h4>: {{mahasiswa.penghasilan_wali}}</h4>
+			<a class="btn btn-success btn-lg" href="{{url_for('lolos',id=mahasiswa.id)}}">Lolos</a>
+			<a class="btn btn-danger btn-lg" href="{{url_for('gagal',id=mahasiswa.id)}}">Tidak lolos</a>
+		</div>
+	</div>
+</div> -->
+
+
+
+
+
+
+
+    
+    
+{% endblock %}

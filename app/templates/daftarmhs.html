@@ -1,0 +1,56 @@
+{%extends 'admin.html'%}
+
+{%block content%}
+<div class="daftarmhs">
+    <div class="container">
+        <h2 class="text-center">Daftar Mahasiswa Baru</h2>
+    {%for m in mhs%}
+        <table class="table table-striped">
+            <thead>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Jurusan</th>
+                <th>Tanggal Lahir</th>
+                <th>Alamat</th>
+                <th>Asal Sekolah</th>
+                <th>Agama</th>
+            </thead>
+            <tbody>
+                <td>{{m.no_seleksi}}</td>
+                <td>{{m.nama}}</td>
+                <td>{{m.prodi1}}</td>
+                <td>{{m.ttl}}</td>
+                <td>{{m.alamat}}</td>
+                <td>{{m.asal_sekolah}}</td>
+                <td>{{m.agama}}</td>
+            </tbody>
+        </table>
+    {%endfor%}
+    </div>
+    
+</div>
+
+    <!-- <h2 class="text-center">Daftar Mahasiswa Baru</h2>
+    {%for m in mhs%}
+        <table class="table table-striped">
+            <thead>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Jurusan</th>
+                <th>Tanggal Lahir</th>
+                <th>Alamat</th>
+                <th>Asal Sekolah</th>
+                <th>Agama</th>
+            </thead>
+            <tbody>
+                <td>{{m.no_seleksi}}</td>
+                <td>{{m.nama}}</td>
+                <td>{{m.prodi1}}</td>
+                <td>{{m.ttl}}</td>
+                <td>{{m.alamat}}</td>
+                <td>{{m.asal_sekolah}}</td>
+                <td>{{m.agama}}</td>
+            </tbody>
+        </table>
+    {%endfor%} -->
+{%endblock%}

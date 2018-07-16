@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<div class="pendaftaran">
+	<div class="row">
+		<div class="container">
+			<div class="row text-center" ><h1>Pendaftaran</h1></div>
+				<div class="row">
+					<div class="col-sm-10  ">
+						<form class="form-horizontal" method="POST" action="">
+							{{form.hidden_tag()}}
+							<div class="form-group">
+								<!-- <label for="" class="control-label col-sm-4">Nama</label> -->
+								{{form.nama.label(class="control-label col-sm-4")}}
+								<div class="col-sm-8">
+									<!-- <input type="text" class="form-control"> -->
+									{{form.nama(class="form-control")}}
+								</div>
+								{% for error in form.nama.errors%}
+								<span class="alert alert-danger"> {{error}}</span>
+								{%endfor%}
+							</div>
+							<div class="form-group">
+								<!-- <label for="" class="control-label col-sm-4">Email</label> -->
+								{{form.email.label(class="control-label col-sm-4")}}
+								<div class="col-sm-8">
+										<!-- <input type="text" class="form-control"> -->
+									{{form.email(class="form-control")}}
+								</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">NIK</label> -->
+									{{form.nik.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.nik(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">TTL</label> -->
+									{{form.ttl.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.ttl(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">JK</label> -->
+									{{form.jenis_kelamin.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.jenis_kelamin(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">prodi1</label> -->
+									{{form.prodi1.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.prodi1(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">prodi2</label> -->
+									{{form.prodi2.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.prodi2(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">Nama</label> -->
+									{{form.agama.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.agama(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">Nama</label> -->
+									{{form.alamat.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.alamat(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">Nama</label> -->
+									{{form.no_hp.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.no_hp(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">Nama</label> -->
+									{{form.asal_sekolah.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.asal_sekolah(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">Nama</label> -->
+									{{form.tahun_lulus.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.tahun_lulus(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">Nama</label> -->
+									{{form.jurusan_sma.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.jurusan_sma(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">Nama</label> -->
+									{{form.nama_wali.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.nama_wali(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">Nama</label> -->
+									{{form.pekerjaan_wali.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.pekerjaan_wali(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									<!-- <label for="" class="control-label col-sm-4">Nama</label> -->
+									{{form.penghasilan_wali.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+											<!-- <input type="text" class="form-control"> -->
+										{{form.penghasilan_wali(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group text-center">
+								<!-- <button type="submit" class="btn btn-primary btn-md col-sm-offset-4">Daftar</button> -->
+									{{form.daftar(class="col-sm-offset-4 btn btn-primary btn-lg")}}
+							</div>
+						</div>
+						
+						</form>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+    <!-- <div class="row">
+    <div class="container" style="margin-bottom:100px; padding-top:70px">
+		<div class="row text-center" ><h1>{{title}}</h1></div>
+			<div class="row">
+					<div class="col-sm-10">
+						<form class="form-horizontal" method="POST" action="">
+							{{form.hidden_tag()}}
+							<div class="form-group">
+								{{form.nama.label(class="control-label col-sm-4")}}
+								<div class="col-sm-8">
+									{{form.nama(class="form-control")}}
+								</div>
+							</div>
+							<div class="form-group">
+								{{form.email.label(class="control-label col-sm-4")}}
+								<div class="col-sm-8">
+									{{form.email(class="form-control")}}
+								</div>
+							</div>
+							<div class="form-group">
+									{{form.nik.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.nik(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.ttl.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.ttl(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.jenis_kelamin.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.jenis_kelamin(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.prodi1.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.prodi1(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.prodi2.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.prodi2(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.agama.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.agama(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.alamat.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.alamat(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.no_hp.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.no_hp(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.asal_sekolah.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.asal_sekolah(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.tahun_lulus.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.tahun_lulus(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.jurusan_sma.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.jurusan_sma(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.nama_wali.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.nama_wali(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.pekerjaan_wali.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.pekerjaan_wali(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group">
+									{{form.penghasilan_wali.label(class="control-label col-sm-4")}}
+									<div class="col-sm-8">
+										{{form.penghasilan_wali(class="form-control")}}
+									</div>
+							</div>
+							<div class="form-group text-center">
+									{{form.daftar(class="col-sm-offset-4 btn btn-primary btn-lg")}}
+							</div>
+						</div>
+						
+						</form>
+					</div>
+				</div>
+	</div>
+</div> -->
+{% endblock %}

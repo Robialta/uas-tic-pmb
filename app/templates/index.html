@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<div class="home">
+    <div class="row">
+        <div class="logo col-sm-3">
+            <img src="../static/bootstrap/img/logo.png" class="img-rounded">
+        </div>
+
+        <div class="col-sm-9 text-center">
+            <h2>PENERIMAAN MAHASISWA BARU FAKULTAS TEKNIK <br> UNIVERSITAS HAMZANWADI TA.2018/2019</h2>
+            <h4>Silahkan klik DAFTAR untuk mendaftar dan LOGIN jika telah mendaftar dan menerima username dan password.</h4>
+            <br>
+            <a href="{{url_for('pendaftaran')}}" class="btn btn-primary btn-lg" style="width:200p;">DAFTAR</a>
+        </div>
+    </div>
+</div>
+
+<div class="sk">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-2">
+            <h3 class="text-center">Syarat Pendaftaran</h3>
+            <ul>
+                <li>Ijazah SMA/ SEDERAJAT</li>
+                <li>Pas Photo 3x4</li>
+                <li>Surat Keterangan LULUS</li>
+                <li>Transkrip Nilai</li>
+                <li>Sehat jasmani dan Rohani</li>
+    
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <h3 class="text-center">Petunjuk  Pendaftaran</h3>
+            <ul>
+                <li>Mengisi Formulir Pendaftaran Di Website Ini</li>
+                <li>Calon mahasiswa akan dikirimkan pemberitahuan melalui e mail</li>
+                <li>Calon mahasiswa login dengan no seleksi yang diterima melalui email</li>
+                <li>Calon mahasiswa mengunduh kartu tes seleksi</li>
+                <li>Calon mahasiswa mengikuti tes</li>
+                <li>Calon mahasiswa mellihat informasi kelulusan di website ini</li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+  <!-- <div class="row" style="padding:90px 20px; background:#2b6f3d">
+      <div class="col-sm-3">
+          <img src="../static/img/logo.png" style="width:300px">
+      </div>
+      <div class="col-sm-9 text-center" style="color:white">
+          <br><br><br>
+          <h2>PENERIMAAN MAHASISWA BARU FAKULTAS TEKNIK <br> UNIVERSITAS HAMZANWADI TA.2018/2019</h2>
+          <h4>Silahkan klik DAFTAR untuk mendaftar dan LOGIN jika telah mendaftar dan menerima username dan password.</h4>
+          <a href="{{url_for('pendaftaran')}}" class="btn btn-primary btn-lg" style="width:200p;">DAFTAR</a>
+      </div>
+      <!  -->
+      
+      
+  <!-- </div>
+  <div class="row" style="width:100%;padding:50px;">
+        <div class="col-sm-6" >
+          <h3>Syarat Pendaftaran</h3>
+          <ul>
+              <li>Ijazah SMA/ SEDERAJAT</li>
+              <li>Pas Photo 3x4</li>
+              <li>Surat Keterangan LULUS</li>
+              <li>Transkrip Nilai</li>
+              <li>Sehat jasmani dan Rohani</li>
+
+          </ul>
+        </div>
+        <div class="col-sm-6" >
+              <h3>Petunjuk  Pendaftaran</h3>
+              <ul>
+                    <li>Mengisi Formulir Pendaftaran Di Website Ini</li>
+                    <li>Calon mahasiswa akan dikirimkan pemberitahuan melalui e mail</li>
+                    <li>Calon mahasiswa login dengan no seleksi yang diterima melalui email</li>
+                    <li>Calon mahasiswa mengunduh kartu tes seleksi</li>
+                    <li>Calon mahasiswa mengikuti tes</li>
+                    <li>Calon mahasiswa mellihat informasi kelulusan di website ini</li>
+      
+                </ul>
+          </div>
+    </div> -->
+    
+{% endblock %}

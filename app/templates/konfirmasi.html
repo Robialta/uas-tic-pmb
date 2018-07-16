@@ -1,0 +1,59 @@
+{% extends 'admin.html' %}
+
+{%block content%}
+<div class="konfirmasi">
+    <div class="row col-sm-10 col-sm-offset-1">
+        <h3 class="text-center">Daftar Mahasiswa Yang Ikut  tes</h3>
+        <table class="table table-striped">
+            <thead >
+                <th >Nama</th>
+                <th>E-mail</th>
+                <th>Prodi 1</th>
+                <th>Prodi 2</th>
+                <th>Validasi</th>
+            </thead>
+            <tbody>
+                {% for mhs in mhsinfo %}
+                <tr >
+                    <td>{{mhs.nama}}</td>
+                    <td>{{mhs.email}}</td>
+                    <td>{{mhs.prodi1}}</td>
+                    <td>{{mhs.prodi2}}</td>
+                    <td>
+                        
+                        <a class="btn btn-success btn-sm" href="{{url_for('diterima',id=mhs.id)}}">Diterima</a>
+                        <a class="btn btn-danger btn-sm" href="{{url_for('ditolak', id=mhs.id)}}">Ditolak</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- <h3 class="text-center">Daftar Mahasiswa Yang Ikut  tes</h3>
+<table class="table table-striped" style="margin:100px 50px 50px 0">
+    <thead >
+        <th >Nama</th>
+        <th>E-mail</th>
+        <th>Prodi 1</th>
+        <th>Prodi 2</th>
+        <th>Validasi</th>
+    </thead>
+    <tbody>
+        {% for mhs in mhsinfo %}
+        <tr >
+            <td>{{mhs.nama}}</td>
+            <td>{{mhs.email}}</td>
+            <td>{{mhs.prodi1}}</td>
+            <td>{{mhs.prodi2}}</td>
+            <td>
+                
+                <a class="btn btn-success btn-sm" href="{{url_for('diterima',id=mhs.id)}}">Diterima</a>
+                <a class="btn btn-danger btn-sm" href="{{url_for('ditolak', id=mhs.id)}}">Ditolak</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody> -->
+<!-- </table> -->
+{%endblock%}

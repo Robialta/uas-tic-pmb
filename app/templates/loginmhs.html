@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<!-- loginmhs -->
+<div class="loginmhs">
+	<div class="row">
+		<h3 class="text-center">LOGIN</h3>
+		<div class="col-sm-2 col-sm-offset-5 text-center">
+			<form class="form-horizontal" method="POST" action="">
+				<div class="form-group">
+					{{form.no_seleksi(class="form-control", placeholder='No Seleksi')}}
+					<!-- <input type="text" class="form-control" id="exampleInputEmail1" placeholder="No Seleksi"> -->
+				</div>
+				<div class="form-group">
+					{{form.password(class="form-control", placeholder="Password")}}
+					<!-- <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password"> -->
+				</div>
+				<div class="form-group">
+					{{form.login(class=" btn btn-primary btn-md")}}
+					<!-- <button type="submit" class="btn btn-primary btn-md">Login</button> -->
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- end login -->
+
+<!-- <div class="row">
+    <div class="container">
+		<div class="row text-center" ><h1 style="margin-top:70px">{{title}}</h1></div>
+			<div class="row">
+					<div class="col-sm-4 col-sm-offset-4 ">
+						<form class="form-horizontal" method="POST" action="">
+					
+							<div class="form-group">								
+								
+									{{form.no_seleksi(class="form-control", placeholder='No Seleksi')}}
+								
+							</div>
+							<div class="form-group">
+								
+									{{form.password(class="form-control", placeholder="Password")}}
+								
+							</div>
+							<div class="form-group text-center">
+								{{form.login(class=" btn btn-primary")}}
+						</div>
+						</form>
+					</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+    
+    
+{% endblock %}

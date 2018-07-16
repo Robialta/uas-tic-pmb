@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{title}}</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/style.css')}}">
+	
+	<script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+	
+</head>
+<body>
+	<div class="row">
+		<nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom:0px;">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="{{url_for('index')}}">PMB</a>
+		    </div>
+		    <ul class="nav navbar-nav" >
+		      <!-- <li><a href="">HOME</a></li> -->		      
+		      <li><a href="{{url_for('pengumuman')}}"><b>PENGUMUMAM</b></a></li>
+		    </ul>
+		    
+				
+					{% if current_user.is_authenticated%}
+					<ul  class="nav navbar-nav navbar-right">
+		  
+						<li><a  href="{{url_for('logoutmhs')}}"><span class="glyphicon glyphicon-user"></span> LOGOUT</a></li>
+					</ul>
+					{% else %}
+					<ul class="nav navbar-nav navbar-right">		  
+						<li><a href="{{url_for('pendaftaran')}}"><span class="glyphicon glyphicon-user"></span> DAFTAR</a></li>
+						<li><a href="{{url_for('loginmhs')}}"><span class="glyphicon glyphicon-user"></span> LOGIN</a></li>
+						
+					</ul>
+					{% endif %}
+			    
+		   
+		  </div>
+		</nav>
+	</div>
+
+		{% with messages = get_flashed_messages(with_categories=true) %}
+			{% for category,message in  messages %}
+			<div class="container">
+				<div class="alert alert-{{category}}" style="margin:60px 0 10px 0;">
+					{{message}}
+				</div>
+			</div>
+			{% endfor %}
+		{% endwith %}
+		{% block content %}
+		{% endblock %}
+	
+		<footer style="background-color:#333; height:300px; width: 100%;" class="warna-abu"> 
+			<div class="container text-center">
+				<div class="row" style="height:200px;">
+					<div class="col-sm-4 warna-abu." >
+						<h4 style="color:#b1b2b9;">CONTACT US</h4><hr style="color:#727073">
+						<span style="color:#398be0;" class="glyphicon glyphicon-earphone"> +62 0375 23681</span>
+						<br><span style="color:#398be0;">Jalan Profesor M.Yamin No.35</span><br>
+						<span style="color:#398be0;">Selong, Lombok Timur - NTB 83611</span>
+
+					</div>
+					<div class="col-sm-4">
+						<h4 style="color:#b1b2b9;" >HAMZANWADI.AC.ID</h4>
+						<hr style="color:#727073">
+						<p  style="color:#aaa;">E Learning | Digital Library | E Journal | SI Akademik Untuk Mahasiswa | SI Akademik Unruk Dosen | Ujian Online | SMS Center | Students Blog Network</p>
+					</div>
+					<div class="col-sm-4">
+						<h4 style="color:#b1b2b9;">NETWORK</h4><hr style="color:#727073">
+						<p style="color:#aaa;">YPH PPD NW Pancor | NahdlatulWathan.ID | Universitas Hamzanwadi</p>
+					</div>
+					
+				</div>
+				<div class="row">
+					<p style="color:#aaa;">&copy Copyright 2018</p>
+			</div>
+			</div>
+		</footer>
+	
+</body>
+</html>

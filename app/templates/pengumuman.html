@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<div class="pengumuman">
+	<div class="row">
+		<h1 class="text-center">{{title}}</h1>
+		<div class="col-sm-10 col-sm-offset-1">
+			<table class="table table-striped" >
+				<thead >
+					<th>Nama</th>
+					<th>No Seleksi</th>
+					<th>Prodi Pilihan 1</th>
+					<th>Prodi Pilihan 2</th>
+					<th>Keterangan</th>
+					
+				</thead>
+				<tbody>
+					{% for mhs in mhs_hasil %}
+					<tr >
+						<td>{{mhs.nama}}</td>
+						<!-- <td>{{mhs.email}}</td> -->
+						<td>{{mhs.no_seleksi}}</td>
+						<td>{{mhs.prodi1}}</td>
+						<td>{{mhs.prodi2}}</td>
+						<td>{{mhs.status}}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+	<!-- <div class="row" style="min-height:400px; position:relative ; top:100px;">
+			<h1 class="text-center">{{title}}</h1>
+		<div class="col-sm-10 col-sm-offset-1">
+				<table class="table table-striped" >
+						<thead >
+							<th>Nama</th>
+							<th>No Seleksi</th>
+							<th>Prodi Pilihan 1</th>
+							<th>Prodi Pilihan 2</th>
+							<th>Keterangan</th>
+							
+						</thead>
+						<tbody>
+							{% for mhs in mhs_hasil %}
+							<tr >
+								<td>{{mhs.nama}}</td>
+								<!-- <td>{{mhs.email}}</td> -->
+								<!-- <td>{{mhs.no_seleksi}}</td>
+								<td>{{mhs.prodi1}}</td>
+								<td>{{mhs.prodi2}}</td>
+								<td>{{mhs.status}}</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+		</div>
+	</div> -->
+    
+    
+{% endblock %}

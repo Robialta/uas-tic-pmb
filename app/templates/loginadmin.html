@@ -1,0 +1,54 @@
+{%extends 'admin.html'%}
+
+{%block content%}
+<!-- loginadmin -->
+<div class="loginmhs">
+	<div class="row">
+		<h3 class="text-center">LOGIN</h3>
+		<div class="col-sm-2 col-sm-offset-5 text-center">
+			<form class="form-horizontal" method="POST" action="">
+				<div class="form-group">
+					{{form.username(class="form-control", placeholder='Username')}}
+					<!-- <input type="text" class="form-control" id="exampleInputEmail1" placeholder="No Seleksi"> -->
+				</div>
+				<div class="form-group">
+					{{form.password(class="form-control", placeholder="Password")}}
+					<!-- <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password"> -->
+				</div>
+				<div class="form-group">
+					{{form.login(class=" btn btn-success btn-lg")}}
+					<!-- <button type="submit" class="btn btn-success btn-md">Login</button> -->
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+    <!-- end login -->
+
+<!-- <div class="row">
+    <div class="container">
+		<div class="row text-center" ><h1>{{title}}</h1></div>
+			<div class="row">
+					<div class="col-sm-4 col-sm-offset-4 ">
+						<form class="form-horizontal" method="POST" action="">
+					
+							<div class="form-group">								
+								
+									{{form.username(class="form-control", placeholder='Username')}}
+								
+							</div>
+							<div class="form-group">
+								
+									{{form.password(class="form-control", placeholder="Password")}}
+								
+							</div>
+							<div class="form-group text-center">
+								{{form.login(class=" btn btn-success btn-lg")}}
+						</div>
+						</form>
+					</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+{%endblock%}
