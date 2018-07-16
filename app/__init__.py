@@ -1,4 +1,3 @@
-import os
 from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
@@ -14,7 +13,7 @@ migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view='loginmhs'
 login.login_message_category = "danger"
-login.login_message = u"Km belum login woe"
+login.login_message = "Km belum login woe"
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
